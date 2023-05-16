@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate.ejs')%>
+<h1>ALL POST</h1>
+<div>
+    <a href="/posts/new">Add Posts</a>
+</div>
+<% for(let post of result) {%>
+    <div class="card mb-6">
+        <div class="row">
+            
+       <div class="col-mg-8">
+        <div class="card-body">
+          <a class="card-title" href="/posts/<%=post._id%>"><%=post.title%></a>
+          <p class="card-text">
+            <small class="text-muted"><%=post.location%></small></p>
+            <div class="col md-4">
+                <img class="img-fluid" alt="" src="<%=post.image%>">
+            </div>
+            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+          <script>
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+</script>
+            <p class="card-text"><%=post.description%></p>
+            
+            <!-- <a class="btn btn-primary" href="/posts/<%=post._id%>">View <%=post.title%></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+    
