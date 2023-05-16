@@ -8,7 +8,8 @@ const ejsMate = require('ejs-mate');
 
 const flash = require('connect-flash');
 const {connectDB} = require("./db/connectdb.js")
-const DATABASE_URL= process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017';
+// const DATABASE_URL= process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017';
+const DATABASE_URL= process.env.DATABASE_URL || 'mongodb+srv://patidarhimank005:patidarhimank@postkaro.gdtuqmc.mongodb.net/';
 const web = require("./routes/web.js")
 const userRoute = require("./routes/users.js")
 const passport = require('passport')
